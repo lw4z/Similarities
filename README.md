@@ -2,7 +2,7 @@
 
 Este estudo teve como objetivo medir a qualidade de transcrição para o idioma Português Brasil nas principais APIs, Google, Microsoft, IBM. Para analisar as transcrições, foi utilizado algoritmos expecificos que são utilizados para medir os graus de precisão de um algoritmo de transcrição.
 
-    Todos os resultados obtidos foram comparados com o resultado da API Voxia para medir o seu desempenho em realção as APIs citadas anteriomente.
+Todos os resultados obtidos foram comparados com o resultado da API Voxia para medir o seu desempenho em realção as APIs citadas anteriomente.
     
 
 ## Getting Started
@@ -20,11 +20,11 @@ Numpy
 
 ### Installing
 
-pip install -r requeriments.txt
+    pip install -r requeriments.txt
 
 ## Running the tests
 
-python Similarities.py -d [.txt directory API] [.txt diretory Original Text]
+    python Similarities.py -d [.txt directory API] [.txt diretory Original Text]
 
 ## License
 
