@@ -11,11 +11,11 @@ Para simular este estudo, basta apenas seguir todas as intruções abaixo. Lembr
 
 ### Prerequisites
 
-Python 3
-NLTK
-Jiwer
-Distance
-Six
+Python 3,
+NLTK,
+Jiwer,
+Distance,
+Six,
 Numpy
 
 ### Installing
