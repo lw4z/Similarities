@@ -134,4 +134,4 @@ if __name__ == '__main__':
     print('Quantidade de Interrogações:', numberOfPunctuation2[2])
     print('Quantidade de Exclamações:', numberOfPunctuation2[3])
     print('Quantidade de Dois Pontos:', numberOfPunctuation2[4])
-    print('Quantidade Total de Pontuações:', numberOfPunctuation[5])
+    print('Quantidade Total de Pontuações:', numberOfPunctuation2[5])
