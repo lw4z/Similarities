@@ -94,18 +94,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
     filename = args.d
     for line in filename:
-        lines.append(Path(line).read_text().splitlines())
+        lines.append(Path(line).read_text())
 
     # Documents or Texts
-    test1 = lines[0]
-    test2 = lines[1]
-
-    test1 = " ".join(test1)
-    test2 = " ".join(test2)
-
-    test1 = re.sub(r'\s{2,}', " ", test1)
-    test2 = re.sub(r'\s{2,}', " ", test2)
-
+    test1 = re.sub(r'\n{1,}|\s{2,}', " ", lines[0])
+    test2 = re.sub(r'\n{1,}|\s{2,}', " ", lines[1])
 
     print("BASE")
     print(test1)
@@ -114,6 +107,7 @@ if __name__ == '__main__':
 
     # Get punctuation
     numberOfPunctuation = get_pontuation(test1)
+    numberOfPunctuation2 = get_pontuation(test2)
 
     # Stopwords removal
     # test1 = text_normalized(test1)
@@ -126,9 +120,18 @@ if __name__ == '__main__':
     print('Cosine:', "%.2f" % get_cosine(test1, test2))
 
     # Punctuation results
+    print("PONTUAÇÃO BASE")
     print('Quantidade de Pontos:', numberOfPunctuation[0])
     print('Quantidade de Virgulas:', numberOfPunctuation[1])
     print('Quantidade de Interrogações:', numberOfPunctuation[2])
     print('Quantidade de Exclamações:', numberOfPunctuation[3])
     print('Quantidade de Dois Pontos:', numberOfPunctuation[4])
+    print('Quantidade Total de Pontuações:', numberOfPunctuation[5])
+
+    print("PONTUAÇÃO AMOSTRA")
+    print('Quantidade de Pontos:', numberOfPunctuation2[0])
+    print('Quantidade de Virgulas:', numberOfPunctuation2[1])
+    print('Quantidade de Interrogações:', numberOfPunctuation2[2])
+    print('Quantidade de Exclamações:', numberOfPunctuation2[3])
+    print('Quantidade de Dois Pontos:', numberOfPunctuation2[4])
     print('Quantidade Total de Pontuações:', numberOfPunctuation[5])
