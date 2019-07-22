@@ -100,8 +100,13 @@ if __name__ == '__main__':
     test1 = lines[0]
     test2 = lines[1]
 
-    test1 = "".join(test1)
-    test2 = "".join(test2)
+    test1 = " ".join(test1)
+    test2 = " ".join(test2)
+
+    test1 = re.sub(r'\s{2,}', " ", test1)
+    test2 = re.sub(r'\s{2,}', " ", test2)
+
+
     print("BASE")
     print(test1)
     print("AMOSTRA")
