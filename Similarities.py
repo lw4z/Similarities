@@ -66,6 +66,10 @@ def get_wer(text1, text2):
     return wer(text1, text2)
 
 
+def get_wrr(text1, text2):
+    return 1 - wer(text1, text2)
+
+
 # Punctuations
 def get_pontuation(text):
     numberOfFullStops = 0
@@ -115,6 +119,7 @@ if __name__ == '__main__':
 
     # Similatities results
     print("WER:", "%.2f" % get_wer(test1, test2))
+    print("WRR:", "%.2f" % get_wrr(test1, test2))
     print("Jaccard:", "%.2f" % get_jaccard(test1, test2))
     print("Levenshtein:", get_levenshtein(test1, test2))
     print('Cosine:', "%.2f" % get_cosine(test1, test2))
